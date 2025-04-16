@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kayıt Onay Sayfası</title>
+</head>
+<body>
+    <h2>Kaydınız Tamamlanmıştır</h2>
+    <script>
+var degerler = new URLSearchParams(window.location.search);
+var ad = degerler.get('isim');
+var eposta = degerler.get('eposta');
+document.write("<p>Kaydınız Tamamlanmıştır</p>");
+        document.write("<p>Adınız: " + ad + "</p>");
+        document.write("<p>E-posta adresiniz: " + eposta + "</p>");
+        document.write("<p>Olarak kaydınız açılmıştır.</p>");
+
+    </script>
+|
+</body>
+</html>
