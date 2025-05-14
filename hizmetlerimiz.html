@@ -1,47 +1,129 @@
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <title>HİZMETLERİMİZ</title>
-</head>
-<body>
-  
-    <a href="index.html">Anasayfa</a><br>
-    <a href="hakkimizda.html">Hakkımızda</a><br>
-    <a href="blog.html">Blog</a><br>
-    <a href="iletisim.html">İletişim</a><br>
-    <a href="kayıt olun.html">Kayıt Olun</a><br>
-  </body>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodeCraft</title>
   <style>
-    .uc-sutun {
-      columns: 3;           /* Sütun sayısı */
-      font-size: 18px;
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      padding-bottom: 60px; /* Footer yüksekliği kadar boşluk bırak */
+    }
+
+    footer {
+        background-color:#460e3a;
+      color: #ccc;
+      text-align: center;
+      padding: 15px 0;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      font-size: 14px;
+    }
+  </style>
+<body>
+  <footer>
+    <p>© 2025 CodeCraft. Tüm hakları saklıdır.</p>
+  </footer>
+
+</body>
+  <style>
+    body {
+      background-image: url('görsel.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed;
+      margin: 0;
+      font-family: sans-serif;
+      color: #e0e0e0;
+      font-weight: 300;
       line-height: 1.6;
+      padding: 20px;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: -1;
+    }
+
+    a {
+      display: inline-block;
+      padding: 6px 12px;
+      margin: 0.75px 0;
+      text-decoration: none;
+      color: white;
+      border-radius: 2px;
+      font-size: 16px;
+      background-color: #7c1265;
+    }
+
+    a:hover {
+      background-color: #7986CB;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 80px;
+      font-style: oblique;
+      margin-top: 40px;
+    }
+
+    .uc-sutun {
+      column-count: 3;
+      column-gap: 40px;
+      margin-top: 40px;
+    }
+
+    .uc-sutun h4 {
+      margin-top: 0;
+      color: #fff;
+    }
+
+    .uc-sutun p {
+      break-inside: avoid;
+      text-align: left;
     }
   </style>
 </head>
 <body>
+  <div class="overlay"></div>
+   <a href="index.html">Anasayfa</a>
+  <a href="hakkimizda.html">Hakkımızda</a>
+  <a href="blog.html">Blog</a>
+  <a href="iletisim.html">İletişim</a>
+  <a href="kayıt olun.html">Kayıt Olun</a>
+
+  <h1>CodeCraft</h1>
+
   <div class="uc-sutun">
-    
-    <p>
- <H4>Yazılım Geliştirme</H4> 
-     CodeCraft, en son teknolojiler ve metodolojileri kullanarak güvenli, verimli ve sürdürülebilir yazılım çözümleri sunar. Her projede mükemmelliği hedefleyerek, teknolojinin gücünü İş dünyasına  entegre eder ve her geçen gün gelişen dijital ekosisteme ayak uydurur.
-    </p>
- 
-    <p>
-    <H4>Oyun Geliştirme</H4>
-     CodeCraft'ta oyun geliştirme, oyunculara özgün ve etkileyici deneyimler sunmayı amaçlayan bir süreçtir. Hom mobil hem de PC platformları için yenilikçi oyunlar tasarlayıp geliştirerek, eğlencell ve sürükleyici dünyalar yaratıyoruz.
-    </p>
-    <P> 
-        <H4>Web Tasarımı</H4>
-        CodeCraft to web tasarımı, estetik, İşlevsellik ve kullanıcı deneyimini mükemmel bir şekilde birleştirerek markaların dijital varlıklarını güçlendirmeyi hedefliyoruz. HTML5, CSS3, JavaScript, React, ve Vue.js gibi modern web teknolojilerini kullanarak, hızlı yüklenen, mobil uyumlu ve SEO dostu web siteleri geliştiriyoruz.
+    <div>
+      <h4>Yazılım Geliştirme</h4>
+      <p>
+        CodeCraft, en son teknolojiler ve metodolojileri kullanarak güvenli, verimli ve sürdürülebilir yazılım çözümleri sunar. Her projede mükemmelliği hedefleyerek, teknolojinin gücünü iş dünyasına entegre eder ve dijital ekosisteme ayak uydurur.
+      </p>
+    </div>
 
+    <div>
+      <h4>Oyun Geliştirme</h4>
+      <p>
+        CodeCraft'ta oyun geliştirme, oyunculara özgün ve etkileyici deneyimler sunmayı amaçlayan bir süreçtir. Hem mobil hem de PC platformları için yenilikçi oyunlar tasarlayıp geliştirerek, eğlenceli ve sürükleyici dünyalar yaratıyoruz.
+      </p>
+    </div>
 
-    </P>
-
-        
-      
+    <div>
+      <h4>Web Tasarımı</h4>
+      <p>
+        CodeCraft olarak web tasarımında estetik, işlevsellik ve kullanıcı deneyimini birleştirerek markaların dijital varlıklarını güçlendiriyoruz. HTML5, CSS3, JavaScript, React ve Vue.js gibi modern teknolojilerle mobil uyumlu ve SEO dostu siteler geliştiriyoruz.
+      </p>
+    </div>
   </div>
-  
+</body>
+</html>

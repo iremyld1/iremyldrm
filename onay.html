@@ -1,22 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kayıt Onay Sayfası</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            color: #fff;
+            background-image: url('gorsel.jpg'); /* Türkçe karakter yok */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .kutu {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 30px 40px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .kutu h2 {
+            margin-top: 0;
+        }
+    </style>
 </head>
 <body>
-    <h2>Kaydınız Tamamlanmıştır</h2>
-    <script>
-var degerler = new URLSearchParams(window.location.search);
-var ad = degerler.get('isim');
-var eposta = degerler.get('eposta');
-document.write("<p>Kaydınız Tamamlanmıştır</p>");
-        document.write("<p>Adınız: " + ad + "</p>");
-        document.write("<p>E-posta adresiniz: " + eposta + "</p>");
-        document.write("<p>Olarak kaydınız açılmıştır.</p>");
+    <div class="kutu">
+        <h2>Kaydınız Tamamlanmıştır</h2>
+        <div id="kullaniciBilgileri"></div>
+    </div>
 
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const ad = params.get('isim');
+        const eposta = params.get('eposta');
+
+        const div = document.getElementById("kullaniciBilgileri");
+        div.innerHTML = `
+            <p>Adınız: ${ad || "Belirtilmedi"}</p>
+            <p>E-posta adresiniz: ${eposta || "Belirtilmedi"}</p>
+            <p>Olarak kaydınız açılmıştır.</p>
+        `;
     </script>
-|
 </body>
 </html>
