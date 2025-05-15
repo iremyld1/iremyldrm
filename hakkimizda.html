@@ -1,18 +1,62 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>CodeCraft</title>
   <style>
     body {
       margin: 0;
       font-family: sans-serif;
-      padding-bottom: 60px; /* Footer yüksekliği kadar boşluk bırak */
+      background-color: black;
+      color: #e0e0e0;
+      font-size: 18px;
+      line-height: 1.5;
+      padding: 20px;
+      padding-bottom: 100px; /* footer için boşluk */
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding-bottom: 20px;
+    }
+
+    .nav-links a {
+      display: inline-block;
+      padding: 8px 16px;
+      text-decoration: none;
+      color: white;
+      border-radius: 4px;
+      font-size: 16px;
+      background-color: #7c1265;
+      transition: background-color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      background-color: #7986CB;
+    }
+
+    h2, h4 {
+      margin-top: 20px;
+      color: #fff;
+    }
+
+    .sutunlar {
+      display: flex;
+      gap: 40px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+
+    .sutun {
+      flex: 1 1 300px;
+      min-width: 280px;
     }
 
     footer {
-        background-color:#460e3a;
+      background-color: #460e3a;
       color: #ccc;
       text-align: center;
       padding: 15px 0;
@@ -22,65 +66,43 @@
       width: 100%;
       font-size: 14px;
     }
-  </style>
-<body>
-  <footer>
-    <p>© 2025 CodeCraft. Tüm hakları saklıdır.</p>
-  </footer>
 
-</body>
-
-  <style>
-    body {
-      background-color: black;
-      color: #e0e0e0;
-      font-size: 18px;
-      font-family: sans-serif;
-      line-height: 1.5;
-      margin: 0;
-      padding: 20px;
-    }
-
-    a {
+    a[target="_blank"] {
       display: inline-block;
-      padding: 6px 12px;
-      margin: 0.75px 0;
-      text-decoration: none;
-      color: white;
-      border-radius: 2px;
-      font-size: 16px;
+      margin-top: 20px;
       background-color: #7c1265;
+      padding: 8px 16px;
+      border-radius: 4px;
+      color: #fff;
+      text-decoration: none;
     }
 
-    a:hover {
+    a[target="_blank"]:hover {
       background-color: #7986CB;
     }
 
-    .sutunlar {
-      display: flex;
-      gap: 40px;
-      margin-top: 20px;
-    }
+    @media (max-width: 768px) {
+      .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+      }
 
-    .sutun {
-      flex: 1;
-    }
-
-    h2, h4 {
-      margin-top: 20px;
-      color: #fff;
+      .sutunlar {
+        flex-direction: column;
+      }
     }
   </style>
 </head>
-
 <body>
-  <div class="nav-links">         <!--linkler arası gezinme-->
+
+  <div class="nav-links">
     <a href="index.html">Anasayfa</a>
     <a href="blog.html">Blog</a>
     <a href="hizmetlerimiz.html">Hizmetlerimiz</a>
     <a href="iletisim.html">İletişim</a>
     <a href="kayıt olun.html">Kayıt Olun</a>
   </div>
+
   <h2>Hakkımızda</h2>
   <p>
     CodeCraft Yazılım Danışmanlık, dijital dönüşüm ve inovasyon alanında faaliyet gösteren,
@@ -109,9 +131,13 @@
     </div>
   </div>
 
-  <br>
   <a href="https://binbiriz.com/blog/yazilim-danismanligi-neden-gerekli" target="_blank">
     Yazılım Danışmanlık Şirketlerinin Önemi
   </a>
+
+  <footer>
+    <p>© 2025 CodeCraft. Tüm hakları saklıdır.</p>
+  </footer>
+
 </body>
 </html>

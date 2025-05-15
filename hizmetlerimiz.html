@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>CodeCraft</title>
   <style>
     body {
       margin: 0;
       font-family: sans-serif;
-      padding-bottom: 60px; /* Footer yüksekliği kadar boşluk bırak */
+      background-image: url('görsel.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed;
+      color: #e0e0e0;
+      padding-bottom: 100px;
     }
 
     footer {
-        background-color:#460e3a;
+      background-color: #460e3a;
       color: #ccc;
       text-align: center;
       padding: 15px 0;
@@ -21,27 +27,6 @@
       left: 0;
       width: 100%;
       font-size: 14px;
-    }
-  </style>
-<body>
-  <footer>
-    <p>© 2025 CodeCraft. Tüm hakları saklıdır.</p>
-  </footer>
-
-</body>
-  <style>
-    body {
-      background-image: url('görsel.jpg');
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-attachment: fixed;
-      margin: 0;
-      font-family: sans-serif;
-      color: #e0e0e0;
-      font-weight: 300;
-      line-height: 1.6;
-      padding: 20px;
     }
 
     .overlay {
@@ -54,18 +39,25 @@
       z-index: -1;
     }
 
-    a {
-      display: inline-block;
-      padding: 6px 12px;
-      margin: 0.75px 0;
-      text-decoration: none;
-      color: white;
-      border-radius: 2px;
-      font-size: 16px;
-      background-color: #7c1265;
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      gap: 10px;
+      padding: 20px;
     }
 
-    a:hover {
+    .nav-links a {
+      display: inline-block;
+      padding: 8px 16px;
+      text-decoration: none;
+      color: white;
+      border-radius: 4px;
+      background-color: #7c1265;
+      transition: background-color 0.3s ease;
+    }
+
+    .nav-links a:hover {
       background-color: #7986CB;
     }
 
@@ -77,9 +69,16 @@
     }
 
     .uc-sutun {
-      column-count: 3;
-      column-gap: 40px;
-      margin-top: 40px;
+      display: flex;
+      gap: 40px;
+      padding: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .uc-sutun > div {
+      flex: 1 1 300px;
+      max-width: 400px;
     }
 
     .uc-sutun h4 {
@@ -88,42 +87,69 @@
     }
 
     .uc-sutun p {
-      break-inside: avoid;
       text-align: left;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 48px;
+        margin: 20px 10px;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links a {
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      .uc-sutun {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .uc-sutun > div {
+        max-width: 90%;
+      }
     }
   </style>
 </head>
 <body>
   <div class="overlay"></div>
-   <a href="index.html">Anasayfa</a>
-  <a href="hakkimizda.html">Hakkımızda</a>
-  <a href="blog.html">Blog</a>
-  <a href="iletisim.html">İletişim</a>
-  <a href="kayıt olun.html">Kayıt Olun</a>
+
+  <div class="nav-links">
+    <a href="index.html">Anasayfa</a>
+    <a href="hakkimizda.html">Hakkımızda</a>
+    <a href="blog.html">Blog</a>
+    <a href="iletisim.html">İletişim</a>
+    <a href="kayıt olun.html">Kayıt Olun</a>
+  </div>
 
   <h1>CodeCraft</h1>
 
   <div class="uc-sutun">
     <div>
       <h4>Yazılım Geliştirme</h4>
-      <p>
-        CodeCraft, en son teknolojiler ve metodolojileri kullanarak güvenli, verimli ve sürdürülebilir yazılım çözümleri sunar. Her projede mükemmelliği hedefleyerek, teknolojinin gücünü iş dünyasına entegre eder ve dijital ekosisteme ayak uydurur.
-      </p>
+      <p>CodeCraft, en son teknolojiler ve metodolojileri kullanarak güvenli, verimli ve sürdürülebilir yazılım çözümleri sunar. Her projede mükemmelliği hedefleyerek, teknolojinin gücünü iş dünyasına entegre eder ve dijital ekosisteme ayak uydurur.</p>
     </div>
 
     <div>
       <h4>Oyun Geliştirme</h4>
-      <p>
-        CodeCraft'ta oyun geliştirme, oyunculara özgün ve etkileyici deneyimler sunmayı amaçlayan bir süreçtir. Hem mobil hem de PC platformları için yenilikçi oyunlar tasarlayıp geliştirerek, eğlenceli ve sürükleyici dünyalar yaratıyoruz.
-      </p>
+      <p>CodeCraft'ta oyun geliştirme, oyunculara özgün ve etkileyici deneyimler sunmayı amaçlayan bir süreçtir. Hem mobil hem de PC platformları için yenilikçi oyunlar tasarlayıp geliştirerek, eğlenceli ve sürükleyici dünyalar yaratıyoruz.</p>
     </div>
 
     <div>
       <h4>Web Tasarımı</h4>
-      <p>
-        CodeCraft olarak web tasarımında estetik, işlevsellik ve kullanıcı deneyimini birleştirerek markaların dijital varlıklarını güçlendiriyoruz. HTML5, CSS3, JavaScript, React ve Vue.js gibi modern teknolojilerle mobil uyumlu ve SEO dostu siteler geliştiriyoruz.
-      </p>
+      <p>CodeCraft olarak web tasarımında estetik, işlevsellik ve kullanıcı deneyimini birleştirerek markaların dijital varlıklarını güçlendiriyoruz. HTML5, CSS3, JavaScript, React ve Vue.js gibi modern teknolojilerle mobil uyumlu ve SEO dostu siteler geliştiriyoruz.</p>
     </div>
   </div>
+
+  <footer>
+    <p>© 2025 CodeCraft. Tüm hakları saklıdır.</p>
+  </footer>
 </body>
 </html>

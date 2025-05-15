@@ -5,71 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CodeCraft</title>
   <style>
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
-      font-family: sans-serif;
-      padding-bottom: 60px; /* Footer yüksekliği kadar boşluk bırak */
+      padding: 0;
     }
 
-    footer {
-      background-color:#460e3a  ;
-      color: #ccc;
-      text-align: center;
-      padding: 15px 0;
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      font-size: 14px;
-    }
-  </style>
-<body>
-  <footer>
-    <p>© 2025 CodeCraft. Tüm hakları saklıdır.</p>
-  </footer>
-
-</body>
-    <style>
-      body {
-        margin: 0;
-        font-family: sans-serif;
-        padding-bottom: 60px; /* Footer yüksekliği kadar boşluk bırak */
-      }
-  
-      footer {
-        background-color: #222;
-        color: #ccc;
-        text-align: center;
-        padding: 15px 0;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        font-size: 14px;
-      }
-    </style>
-  <body>
-    <footer>
-      <p>© 2025 CodeCraft. Tüm hakları saklıdır.</p>
-    </footer>
-  
-  </body>
-  
-  <style>
     body {
       background-image: url('arkaplan.jpg');
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
       background-attachment: fixed;
-      margin: 0;
       font-family: sans-serif;
       color: #e0e0e0;
-      font-weight: 300;
-      line-height: 1.6;
-      position: relative;
-      z-index: 0;
-      padding: 20px;
+      padding-bottom: 60px; /* Footer için alan bırak */
     }
 
     .overlay {
@@ -82,13 +32,12 @@
       z-index: -1;
     }
 
-  
     .nav-links {
-      position: absolute;
-      top: 20px;
-      left: 20px;
       display: flex;
-      gap: 10px; 
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 20px;
     }
 
     .nav-links a {
@@ -105,53 +54,66 @@
       background-color: #7986CB;
     }
 
-  
     h1 {
       text-align: center;
-      font-size: 80px;
+      font-size: 64px;
       font-style: normal;
-      position: absolute;
-      top: 40%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      margin-top: 100px;
     }
 
     h2 {
       text-align: center;
       font-size: 20px;
-      font-style: normal;
-      position: absolute;
-      top: 60%; 
-      left: 50%;
-      transform: translate(-50%, -50%);
+      margin-top: 20px;
     }
 
-    ul {
-      list-style-type: circle;
-      padding-left: 20px;
+    footer {
+      background-color:#460e3a;
+      color: #ccc;
+      text-align: center;
+      padding: 15px 0;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      font-size: 14px;
     }
 
-    p {
-      max-width: 700px;
-      margin: 0 auto;
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 40px;
+      }
+
+      .nav-links {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .nav-links a {
+        width: 100%;
+        text-align: center;
+      }
     }
   </style>
 </head>
 <body>
-    <div class="overlay"></div>
+  <div class="overlay"></div>
 
-    <!-- Linklerin üst sol köşede hizalanması -->
-    <div class="nav-links">
-      <a href="hakkimizda.html">Hakkımızda</a>
-      <a href="blog.html">Blog</a>
-      <a href="hizmetlerimiz.html">Hizmetlerimiz</a>
-      <a href="iletisim.html">İletişim</a>
-      <a href="kayıt olun.html">Kayıt Olun</a>
-    </div>
-    <br><br><br><br><br><br><br><br><br><br>
- <h1>CodeCraft</h1> <br><br><br><br><br><br><br><br><br>
-    <h2>"Yazılımda Mükemmellik İşinizde Fark Yaratır"</h2>
-    
+  <!-- Sağ üstteki navigasyon -->
+  <div class="nav-links">
+    <a href="hakkimizda.html">Hakkımızda</a>
+    <a href="blog.html">Blog</a>
+    <a href="hizmetlerimiz.html">Hizmetlerimiz</a>
+    <a href="iletisim.html">İletişim</a>
+    <a href="kayıt olun.html">Kayıt Olun</a>
+  </div>
+
+  <h1>CodeCraft</h1>
+  <h2>"Yazılımda Mükemmellik İşinizde Fark Yaratır"</h2>
+
+  <footer>
+    <p>© 2025 CodeCraft. Tüm hakları saklıdır.</p>
+  </footer>
 </body>
 </html>
-

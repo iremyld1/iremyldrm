@@ -1,79 +1,171 @@
 <!DOCTYPE html>
-<html lang="trend">
+<html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        body {
-          margin: 0;
-          font-family: sans-serif;
-          padding-bottom: 60px; /* Footer yüksekliği kadar boşluk bırak */
-        }
-    
-        footer {
-          background-color:#460e3a  ;
-          color: #ccc;
-          text-align: center;
-          padding: 15px 0;
-          position: fixed;
-          bottom: 0;
-          left: 0;
-          width: 100%;
-          font-size: 14px;
-        }
-      </style>
-    <body>
-      <footer>
-        <p>© 2025 CodeCraft. Tüm hakları saklıdır.</p>
-      </footer>
-    
-    </body>
-   <style> form {
-        max-width: 600px;
-        margin: 0 auto;
-        background-color: rgba(0, 0, 0, 0.6); /* Şeffaf arka plan */
-        padding: 30px;
-        border-radius: 15px;
-        border: 2px solid #7c1265;
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CodeCraft Kayıt Formu</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-image: url('görsel.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed;
+      color: #e0e0e0;
+      font-size: 18px;
+      padding: 20px;
+      padding-bottom: 100px; 
+    }
+
+    /* Footer */
+    footer {
+      background-color: #460e3a;
+      color: #ccc;
+      text-align: center;
+      padding: 15px 0;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      font-size: 14px;
+    }
+
+  
+    form {
+      max-width: 600px;
+      margin: 40px auto 0 auto;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 30px;
+      border-radius: 15px;
+      border: 2px solid #7c1265;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-weight: 300;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      font-weight: 200;
+    }
+
+    p {
+      margin-bottom: 15px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-bottom: 5px;
+      font-weight: 600;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="color"],
+    input[type="range"] {
+      padding: 8px;
+      border-radius: 6px;
+      border: none;
+      font-size: 16px;
+    }
+
+    .cinsiyet-group {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-top: 5px;
+    }
+
+    input[type="radio"] {
+      margin-left: 0;
+      margin-right: 5px;
+    }
+
+    /* Gönder butonu */
+    input[type="submit"] {
+      background-color: #7c1265;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 18px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 10px;
+      width: 100%;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #7986CB;
+    }
+
+
+    @media (max-width: 480px) {
+      form {
+        padding: 20px;
       }
-    </style>
+      input[type="submit"] {
+        font-size: 16px;
+        padding: 10px;
+      }
+      .cinsiyet-group {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
 </head>
 <body>
-    <form action="onay.html"> 
-        <style>
-            body {
-              background-image: url('görsel.jpg');
-              background-size: cover;
-              background-repeat: no-repeat;
-              background-position: center;
-              background-attachment: fixed;
-              margin: 0;
-              color: #e0e0e0;
-              font-size: 20px;
-            }
-        </style>
+  <h1>Hadi Sende CodeCraft Ailesine Katıl!</h1>
 
-<h1 style="text-align: center;">Hadi Sende CodeCraft Ailesine Katıl !</h1>
-        <h2>Kayıt Formu</h2>
-        <p><label for="isim">İsim Soyisim:</label><input type="text"  id="isim" name="isim" required > </p>
-            <label for="email">E-posta:</label>
-            <input type="email" id="email" name="email" required>
-        <p><label for="sifre">Şifre</label ><input type="password" id="sifre" name="sifre" required>
-        <p><label for="renk">Renk Seçin:</label> <input type="color"  name="renk" id="renk"></p>
-        <p><label for="memnuniyet">Memnuuniyet Seviyenizi Belirtiniz</label> <input type="range" name="memnuniyet" min="0" max="1000">
-        <p><label for="">Cinsiyetiniz:</label>
-            <label for="kadin">Kadın</label>
-            <input type="radio" value="K" name="cinsiyet" id="kadin">
-            <label for="erkek">Erkek</label>
-            <input type="radio" value="E" name="cinsiyet" id="erkek">
-          </p>
+  <form action="onay.html" method="POST">
+    <h2>Kayıt Formu</h2>
 
-          <p>
-              <input type="submit" value="Gönder">
-          </p>
-      </form>
-      
-  </body>
-  </html>
+    <p>
+      <label for="isim">İsim Soyisim:</label>
+      <input type="text" id="isim" name="isim" required />
+    </p>
+
+    <p>
+      <label for="email">E-posta:</label>
+      <input type="email" id="email" name="email" required />
+    </p>
+
+    <p>
+      <label for="sifre">Şifre:</label>
+      <input type="password" id="sifre" name="sifre" required />
+    </p>
+
+   
+
+    <p>
+      <label for="memnuniyet">Memnuniyet Seviyenizi Belirtiniz:</label>
+      <input type="range" id="memnuniyet" name="memnuniyet" min="0" max="1000" />
+    </p>
+
+    <p>
+      <label>Cinsiyetiniz:</label>
+      <div class="cinsiyet-group">
+        <label for="kadin"><input type="radio" value="K" name="cinsiyet" id="kadin" /> Kadın</label>
+        <label for="erkek"><input type="radio" value="E" name="cinsiyet" id="erkek" /> Erkek</label>
+      </div>
+    </p>
+
+    <p>
+      <input type="submit" value="Gönder" />
+    </p>
+  </form>
+
+  <footer>
+    <p>© 2025 CodeCraft. Tüm hakları saklıdır.</p>
+  </footer>
+
+</body>
+</html>

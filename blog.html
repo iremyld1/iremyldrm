@@ -1,193 +1,172 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-      body {
-        margin: 0;
-        font-family: sans-serif;
-        padding-bottom: 60px; /* Footer yüksekliği kadar boşluk bırak */
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CodeCraft</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-image: url('görsel.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed;
+      color: #e0e0e0;
+      font-weight: 300;
+      line-height: 1.6;
+      padding: 20px;
+      padding-bottom: 100px; /* footer için boşluk */
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: -1;
+    }
+
+    a {
+      display: inline-block;
+      padding: 6px 12px;
+      margin: 0.75px 0;
+      text-decoration: none;
+      color: white;
+      border-radius: 2px;
+      font-size: 16px;
+      background-color: #7c1265;
+      transition: background-color 0.3s ease;
+    }
+
+    a:hover {
+      background-color: #7986CB;
+    }
+
+    nav {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 80px;
+      font-style: oblique;
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+
+    .sutunlar {
+      display: flex;
+      gap: 20px;
+      padding: 20px 0;
+      font-size: large;
+      flex-wrap: wrap;
+    }
+
+    .sutun {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    h3 {
+      margin-top: 0;
+      color: #fff;
+    }
+
+    footer {
+      background-color: #460e3a;
+      color: #ccc;
+      text-align: center;
+      padding: 15px 0;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      font-size: 14px;
+    }
+
+    /* Mobil uyumluluk */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
       }
-  
-      footer {
-        background-color:#460e3a;
-        color: #ccc;
-        text-align: center;
-        padding: 15px 0;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        font-size: 14px;
+
+      .sutunlar {
+        flex-direction: column;
       }
-    </style>
-  <body>
-    <footer>
-      <p>© 2025 CodeCraft. Tüm hakları saklıdır.</p>
-    </footer>
-  
-  </body>
-    <style>
-      body {
-        background-image: url('görsel.jpg');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-attachment: fixed;
-        margin: 0;
-        font-family: sans-serif;
-        color: #e0e0e0;
-        font-weight: 300;
-        line-height: 1.6;
-        padding: 20px;
-      }
-  
-      .overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.4);
-        z-index: -1;
-      }
-  
-      a {
-        display: inline-block;
-        padding: 6px 12px;
-        margin: 0.75px 0;
-        text-decoration: none;
-        color: white;
-        border-radius: 2px;
-        font-size: 16px;
-        background-color: #7c1265;
-      }
-  
-      a:hover {
-        background-color: #7986CB;
-      }
-  
+
       h1 {
-        text-align: center;
-        font-size: 80px;
-        font-style: oblique;
-        margin-top: 40px;
+        font-size: 50px;
       }
-  
-      .uc-sutun {
-        column-count: 3;
-        column-gap: 40px;
-        margin-top: 40px;
-      }
-  
-      .uc-sutun h4 {
-        margin-top: 0;
-        color: #fff;
-      }
-  
-      .uc-sutun p {
-        break-inside: avoid;
-        text-align: left;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="overlay"></div>
-     <a href="index.html">Anasayfa</a>
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay"></div>
+
+  <nav>
+    <a href="index.html">Anasayfa</a>
     <a href="hakkimizda.html">Hakkımızda</a>
     <a href="hizmetlerimiz.html">Hizmetlerimiz</a>
     <a href="iletisim.html">İletişim</a>
     <a href="kayıt olun.html">Kayıt Olun</a>
-</head>
-<body>
-  
-    <h1 style="text-align: center;">CodeCraft</h1><br>
-    <style>
-        .sutunlar {
-          display: flex;
-          gap: 20px;
-          padding: 20px;
-          font-size: large ;
-        }
-      
-        .sutun {
-          flex: 1;
-        }
-      </style>
+  </nav>
 
+  <h1>CodeCraft</h1>
 
-
-    <div class="sutunlar">
-        <div class="sutun">
-<p>
-    <h3>SÜREKLİ AR-GE</h3>
-        Teknolojiyi yakından takip ediyoruz. En yeni teknolojileri test ediyor, en uygun çözümleri 
-        araştırıyoruz. Bugüne dek uyguladığımız sayısız projeden aldığımız mutlu müşteri dönüşleri 
-        ile gurur duyuyoruz. Biliyoruz ki mühendislik, bilim ve matematiksel prensipleri, tecrübe, 
-        karar ve ortak fikirleri kullanarak insana faydalı ürünler ortaya koyma sanatıdır.</p>
+  <div class="sutunlar">
+    <div class="sutun">
+      <h3>SÜREKLİ AR-GE</h3>
+      <p>
+        Teknolojiyi yakından takip ediyoruz. En yeni teknolojileri test ediyor, en uygun çözümleri
+        araştırıyoruz. Bugüne dek uyguladığımız sayısız projeden aldığımız mutlu müşteri dönüşleri
+        ile gurur duyuyoruz. Biliyoruz ki mühendislik, bilim ve matematiksel prensipleri, tecrübe,
+        karar ve ortak fikirleri kullanarak insana faydalı ürünler ortaya koyma sanatıdır.
+      </p>
     </div>
     <div class="sutun">
-   
-   <p>     <h3>GELECEĞİ KODLAYAN FİRMA</h3>
+      <h3>GELECEĞİ KODLAYAN FİRMA</h3>
+      <p>
         Teknolojinin hızla geliştiği ve dijital dönüşümün şirketler için bir gereklilik haline geldiği
-             günümüzde, firmaların rekabet avantajı elde edebilmesi için inovatif yazılım çözümlerine olan
-              ihtiyac artıyor. CodeCraft Yazılım Danışmanlık, tam da bu noktada devreye girerek şirketlerin
-               teknoloji yolculuğunda güvenilir bir rehber oluyor.</p>
-            </div>
-        </div>
- 
-        <style>
-            .sutunlar {
-              display: flex;
-              gap: 20px;
-              padding: 20px;
-              font-size: large ;
-            }
-          
-            .sutun {
-              flex: 1;
-            }
-          </style> 
-          <div class="sutunlar">
-            <div class="sutun">    
-          <p>  <h3>GELECEĞE HAZIRLANIN</h3>
-         Yapay zeka, sadece bir trend değil, iş dünyasının geleceğini şekillendirecek bir güçtür.
-                 CodeCraft olarak, yapay zeka ile ilgili uzmanlığımızla işletmenizi bu geleceğe hazırlamak
-                  için buradayız. Daha fazla bilgi için bizimle iletişime geçin ve yapay zekanın işiniz 
-                  üzerindeki etkisini keşfedin. <br><br> CodeCraft ile geleceğinizi yapay zeka ile inşa edin!</P>
-                </div>
-                <div class="sutun">
-<p>
-    <h3>CODECRAFT VE YAPAY ZEKA</h3>
-        CodeCraft olarak, yapay zeka çözümlerini işletmelerinizin ihtiyaçlarına göre uyarlıyoruz. Veri
-             analitiği, müşteri davranış modellemeleri ve operasyonel süreçlerin iyileştirilmesi gibi 
-             konularda YZ teknolojilerini entegre ediyoruz. Amacımız, iş süreçlerinizi daha akıllı hale
-              getirerek rekabet gücünüzü artırmaktır.</p>
-            </div>
-        </div>
- 
+        günümüzde, firmaların rekabet avantajı elde edebilmesi için inovatif yazılım çözümlerine olan
+        ihtiyaç artıyor. CodeCraft Yazılım Danışmanlık, tam da bu noktada devreye girerek şirketlerin
+        teknoloji yolculuğunda güvenilir bir rehber oluyor.
+      </p>
+    </div>
+  </div>
 
+  <div class="sutunlar">
+    <div class="sutun">
+      <h3>GELECEĞE HAZIRLANIN</h3>
+      <p>
+        Yapay zeka, sadece bir trend değil, iş dünyasının geleceğini şekillendirecek bir güçtür.
+        CodeCraft olarak, yapay zeka ile ilgili uzmanlığımızla işletmenizi bu geleceğe hazırlamak
+        için buradayız. Daha fazla bilgi için bizimle iletişime geçin ve yapay zekanın işiniz
+        üzerindeki etkisini keşfedin.
+        <br><br>
+        CodeCraft ile geleceğinizi yapay zeka ile inşa edin!
+      </p>
+    </div>
+    <div class="sutun">
+      <h3>CODECRAFT VE YAPAY ZEKA</h3>
+      <p>
+        CodeCraft olarak, yapay zeka çözümlerini işletmelerinizin ihtiyaçlarına göre uyarlıyoruz.
+        Veri analitiği, müşteri davranış modellemeleri ve operasyonel süreçlerin iyileştirilmesi gibi
+        konularda YZ teknolojilerini entegre ediyoruz. Amacımız, iş süreçlerinizi daha akıllı hale
+        getirerek rekabet gücünüzü artırmaktır.
+      </p>
+    </div>
+  </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <footer>
+    <p>© 2025 CodeCraft. Tüm hakları saklıdır.</p>
+  </footer>
 </body>
 </html>
