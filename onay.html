@@ -1,55 +1,71 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kayıt Onay Sayfası</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: sans-serif;
-            color: #fff;
-            background-image: url('gorsel.jpg'); /* Türkçe karakter yok */
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            background-attachment: fixed;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-        }
-
-        .kutu {
-            background-color: rgba(0, 0, 0, 0.6);
-            padding: 30px 40px;
-            border-radius: 12px;
-            text-align: center;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        }
-
-        .kutu h2 {
-            margin-top: 0;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kayıt Onay Sayfası</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      color: #fff;
+      background-image: url('gorsel.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    .kutu {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 30px 40px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      max-width: 500px;
+      width: 90%;
+    }
+    .kutu h2 {
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+    .bilgi {
+      text-align: left;
+      font-size: 18px;
+    }
+    .bilgi p {
+      margin: 8px 0;
+    }
+  </style>
 </head>
 <body>
-    <div class="kutu">
-        <h2>Kaydınız Tamamlanmıştır</h2>
-        <div id="kullaniciBilgileri"></div>
-    </div>
 
-    <script>
-        const params = new URLSearchParams(window.location.search);
-        const ad = params.get('isim');
-        const eposta = params.get('eposta');
+  <div class="kutu">
+    <h2>Kaydınız Tamamlanmıştır</h2>
+    <div id="kullaniciBilgileri" class="bilgi"></div>
+  </div>
 
-        const div = document.getElementById("kullaniciBilgileri");
-        div.innerHTML = `
-            <p>Adınız: ${ad || "Belirtilmedi"}</p>
-            <p>E-posta adresiniz: ${eposta || "Belirtilmedi"}</p>
-            <p>Olarak kaydınız açılmıştır.</p>
-        `;
-    </script>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+
+    const ad = params.get('isim') || "Belirtilmedi";
+    const email = params.get('email') || "Belirtilmedi";
+    const renk = params.get('renk') || "Belirtilmedi";
+    const memnuniyet = params.get('memnuniyet') || "Belirtilmedi";
+    const cinsiyet = params.get('cinsiyet') || "Belirtilmedi";
+
+    document.getElementById("kullaniciBilgileri").innerHTML = `
+      <p><strong>İsim Soyisim:</strong> ${ad}</p>
+      <p><strong>E-posta:</strong> ${email}</p>
+      <p><strong>Seçilen Renk:</strong> <span style="display:inline-block; width:20px; height:20px; background:${renk}; vertical-align:middle; border-radius: 3px; border: 1px solid #ccc;"></span> ${renk}</p>
+      <p><strong>Memnuniyet Seviyesi:</strong> ${memnuniyet}</p>
+      <p><strong>Cinsiyet:</strong> ${cinsiyet}</p>
+      <p>Olarak kaydınız açılmıştır. Teşekkür ederiz!</p>
+    `;
+  </script>
+
 </body>
 </html>
