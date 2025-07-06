@@ -4,6 +4,78 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>CodeCraft</title>
+  <!-- Chatbot Başlatıcı Butonu -->
+<div id="chatbot-launcher" onclick="openChatbot()" style="
+  position: fixed; 
+  bottom: 24px; 
+  right: 24px; 
+  width: 60px; 
+  height: 60px; 
+  background: #1e90ff; 
+  border-radius: 50%; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18); 
+  cursor: pointer; 
+  z-index: 9999;">
+  <img src="https://cdn-icons-png.flaticon.com/512/2950/2950651.png" alt="Chat" style="width:32px;height:32px;">
+</div>
+
+<!-- Chatbot Penceresi -->
+<div id="chatbot-container" style="
+  position: fixed; 
+  bottom: 24px; 
+  right: 24px; 
+  width: 350px; 
+  background: #fff; 
+  border-radius: 12px; 
+  box-shadow: 0 2px 16px rgba(0,0,0,0.18); 
+  display: none; 
+  flex-direction: column; 
+  z-index: 10000;">
+  <div id="chatbot-header" style="background:#1e90ff; color:#fff; padding:12px; border-radius:12px 12px 0 0; display:flex; justify-content:space-between; align-items:center;">
+    <span>Canlı Destek</span>
+    <button onclick="closeChatbot()" style="background:transparent; border:none; color:#fff; font-size:20px; cursor:pointer;">×</button>
+  </div>
+  <div id="chatbot-messages" style="background:#f6f8fa; height:260px; overflow-y:auto; padding:12px; font-size:15px;"></div>
+  <div style="padding:10px; background:#fff; border-radius:0 0 12px 12px;">
+    <input id="chatbot-input" type="text" style="width:75%; padding:7px; border-radius:5px; border:1px solid #ddd;" placeholder="Sorunuzu yazın...">
+    <button onclick="sendMessage()" style="width:20%; padding:7px; background:#1e90ff; color:#fff; border:none; border-radius:5px;">Gönder</button>
+  </div>
+</div>
+
+<script>
+function openChatbot() {
+  document.getElementById('chatbot-container').style.display = 'flex';
+  document.getElementById('chatbot-launcher').style.display = 'none';
+}
+function closeChatbot() {
+  document.getElementById('chatbot-container').style.display = 'none';
+  document.getElementById('chatbot-launcher').style.display = 'flex';
+}
+function sendMessage() {
+  var input = document.getElementById('chatbot-input');
+  var messages = document.getElementById('chatbot-messages');
+  var msg = input.value.trim();
+  if(msg) {
+    var userMsg = document.createElement('div');
+    userMsg.textContent = "Siz: " + msg;
+    userMsg.style.marginBottom = "8px";
+    userMsg.style.textAlign = "right";
+    messages.appendChild(userMsg);
+    input.value = '';
+    // Basit otomatik cevap
+    var botMsg = document.createElement('div');
+    botMsg.textContent = "Bot: Sorunuz alındı, en kısa sürede yanıtlayacağız.";
+    botMsg.style.color = "#555";
+    botMsg.style.marginBottom = "12px";
+    botMsg.style.textAlign = "left";
+    messages.appendChild(botMsg);
+    messages.scrollTop = messages.scrollHeight;
+  }
+}
+</script>
   <style>
     body {
       margin: 0;
@@ -125,6 +197,7 @@
     <a href="index.html">Anasayfa</a>
     <a href="hakkimizda.html">Hakkımızda</a>
     <a href="blog.html">Blog</a>
+    <a href="hizmetlerimiz.html">Hizmetlerimiz</a>
     <a href="iletisim.html">İletişim</a>
     <a href="kayıt olun.html">Kayıt Olun</a>
   </div>
@@ -133,16 +206,19 @@
 
   <div class="uc-sutun">
     <div>
+      <img src="hizmetlerimiz.jpg" alt="">
       <h4>Yazılım Geliştirme</h4>
       <p>CodeCraft, en son teknolojiler ve metodolojileri kullanarak güvenli, verimli ve sürdürülebilir yazılım çözümleri sunar. Her projede mükemmelliği hedefleyerek, teknolojinin gücünü iş dünyasına entegre eder ve dijital ekosisteme ayak uydurur.</p>
     </div>
 
     <div>
+      <img src="hizm.jpg" alt="">
       <h4>Oyun Geliştirme</h4>
       <p>CodeCraft'ta oyun geliştirme, oyunculara özgün ve etkileyici deneyimler sunmayı amaçlayan bir süreçtir. Hem mobil hem de PC platformları için yenilikçi oyunlar tasarlayıp geliştirerek, eğlenceli ve sürükleyici dünyalar yaratıyoruz.</p>
     </div>
 
     <div>
+      <img src="hiz.jpg" alt="">
       <h4>Web Tasarımı</h4>
       <p>CodeCraft olarak web tasarımında estetik, işlevsellik ve kullanıcı deneyimini birleştirerek markaların dijital varlıklarını güçlendiriyoruz. HTML5, CSS3, JavaScript, React ve Vue.js gibi modern teknolojilerle mobil uyumlu ve SEO dostu siteler geliştiriyoruz.</p>
     </div>

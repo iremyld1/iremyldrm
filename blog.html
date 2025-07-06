@@ -4,6 +4,78 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>CodeCraft</title>
+  <!-- Chatbot Başlatıcı Butonu -->
+<div id="chatbot-launcher" onclick="openChatbot()" style="
+  position: fixed; 
+  bottom: 24px; 
+  right: 24px; 
+  width: 60px; 
+  height: 60px; 
+  background: #1e90ff; 
+  border-radius: 50%; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18); 
+  cursor: pointer; 
+  z-index: 9999;">
+  <img src="https://cdn-icons-png.flaticon.com/512/2950/2950651.png" alt="Chat" style="width:32px;height:32px;">
+</div>
+
+<!-- Chatbot Penceresi -->
+<div id="chatbot-container" style="
+  position: fixed; 
+  bottom: 24px; 
+  right: 24px; 
+  width: 350px; 
+  background: #fff; 
+  border-radius: 12px; 
+  box-shadow: 0 2px 16px rgba(0,0,0,0.18); 
+  display: none; 
+  flex-direction: column; 
+  z-index: 10000;">
+  <div id="chatbot-header" style="background:#1e90ff; color:#fff; padding:12px; border-radius:12px 12px 0 0; display:flex; justify-content:space-between; align-items:center;">
+    <span>Canlı Destek</span>
+    <button onclick="closeChatbot()" style="background:transparent; border:none; color:#fff; font-size:20px; cursor:pointer;">×</button>
+  </div>
+  <div id="chatbot-messages" style="background:#f6f8fa; height:260px; overflow-y:auto; padding:12px; font-size:15px;"></div>
+  <div style="padding:10px; background:#fff; border-radius:0 0 12px 12px;">
+    <input id="chatbot-input" type="text" style="width:75%; padding:7px; border-radius:5px; border:1px solid #ddd;" placeholder="Sorunuzu yazın...">
+    <button onclick="sendMessage()" style="width:20%; padding:7px; background:#1e90ff; color:#fff; border:none; border-radius:5px;">Gönder</button>
+  </div>
+</div>
+
+<script>
+function openChatbot() {
+  document.getElementById('chatbot-container').style.display = 'flex';
+  document.getElementById('chatbot-launcher').style.display = 'none';
+}
+function closeChatbot() {
+  document.getElementById('chatbot-container').style.display = 'none';
+  document.getElementById('chatbot-launcher').style.display = 'flex';
+}
+function sendMessage() {
+  var input = document.getElementById('chatbot-input');
+  var messages = document.getElementById('chatbot-messages');
+  var msg = input.value.trim();
+  if(msg) {
+    var userMsg = document.createElement('div');
+    userMsg.textContent = "Siz: " + msg;
+    userMsg.style.marginBottom = "8px";
+    userMsg.style.textAlign = "right";
+    messages.appendChild(userMsg);
+    input.value = '';
+    // Basit otomatik cevap
+    var botMsg = document.createElement('div');
+    botMsg.textContent = "Bot: Sorunuz alındı, en kısa sürede yanıtlayacağız.";
+    botMsg.style.color = "#555";
+    botMsg.style.marginBottom = "12px";
+    botMsg.style.textAlign = "left";
+    messages.appendChild(botMsg);
+    messages.scrollTop = messages.scrollHeight;
+  }
+}
+</script>
   <style>
     body {
       margin: 0;
@@ -114,59 +186,53 @@
   <nav>
     <a href="index.html">Anasayfa</a>
     <a href="hakkimizda.html">Hakkımızda</a>
+     <a href="blog.html">Blog</a>
     <a href="hizmetlerimiz.html">Hizmetlerimiz</a>
     <a href="iletisim.html">İletişim</a>
     <a href="kayıt olun.html">Kayıt Olun</a>
   </nav>
 
   <h1>CodeCraft</h1>
-
-  <div class="sutunlar">
-    <div class="sutun">
       <h3>SÜREKLİ AR-GE</h3>
       <p>
         Teknolojiyi yakından takip ediyoruz. En yeni teknolojileri test ediyor, en uygun çözümleri
-        araştırıyoruz. Bugüne dek uyguladığımız sayısız projeden aldığımız mutlu müşteri dönüşleri
-        ile gurur duyuyoruz. Biliyoruz ki mühendislik, bilim ve matematiksel prensipleri, tecrübe,
+        araştırıyoruz. <br> Bugüne dek uyguladığımız sayısız projeden aldığımız mutlu müşteri dönüşleri
+        ile gurur duyuyoruz. Biliyoruz ki mühendislik, <br> bilim ve matematiksel prensipleri, tecrübe,
         karar ve ortak fikirleri kullanarak insana faydalı ürünler ortaya koyma sanatıdır.
       </p>
-    </div>
-    <div class="sutun">
+  
+      <br>
       <h3>GELECEĞİ KODLAYAN FİRMA</h3>
       <p>
         Teknolojinin hızla geliştiği ve dijital dönüşümün şirketler için bir gereklilik haline geldiği
-        günümüzde, firmaların rekabet avantajı elde edebilmesi için inovatif yazılım çözümlerine olan
-        ihtiyaç artıyor. CodeCraft Yazılım Danışmanlık, tam da bu noktada devreye girerek şirketlerin
+        günümüzde,<br> firmaların rekabet avantajı elde edebilmesi için inovatif yazılım çözümlerine olan
+        ihtiyaç artıyor.CodeCraft Yazılım Danışmanlık, <br>tam da bu noktada devreye girerek şirketlerin
         teknoloji yolculuğunda güvenilir bir rehber oluyor.
       </p>
-    </div>
-  </div>
-
-  <div class="sutunlar">
-    <div class="sutun">
+   <br>
       <h3>GELECEĞE HAZIRLANIN</h3>
       <p>
         Yapay zeka, sadece bir trend değil, iş dünyasının geleceğini şekillendirecek bir güçtür.
-        CodeCraft olarak, yapay zeka ile ilgili uzmanlığımızla işletmenizi bu geleceğe hazırlamak
-        için buradayız. Daha fazla bilgi için bizimle iletişime geçin ve yapay zekanın işiniz
+        CodeCraft olarak, <br>yapay zeka ile ilgili uzmanlığımızla işletmenizi bu geleceğe hazırlamak
+        için buradayız. Daha fazla bilgi için bizimle iletişime geçin <br> ve yapay zekanın işiniz
         üzerindeki etkisini keşfedin.
         <br><br>
         CodeCraft ile geleceğinizi yapay zeka ile inşa edin!
       </p>
-    </div>
-    <div class="sutun">
+   <br>
       <h3>CODECRAFT VE YAPAY ZEKA</h3>
       <p>
-        CodeCraft olarak, yapay zeka çözümlerini işletmelerinizin ihtiyaçlarına göre uyarlıyoruz.
+        CodeCraft olarak, yapay zeka çözümlerini işletmelerinizin ihtiyaçlarına göre uyarlıyoruz. <br>
         Veri analitiği, müşteri davranış modellemeleri ve operasyonel süreçlerin iyileştirilmesi gibi
-        konularda YZ teknolojilerini entegre ediyoruz. Amacımız, iş süreçlerinizi daha akıllı hale
+        konularda YZ teknolojilerini entegre ediyoruz. <br>Amacımız, iş süreçlerinizi daha akıllı hale
         getirerek rekabet gücünüzü artırmaktır.
       </p>
-    </div>
-  </div>
+  
 
   <footer>
     <p>© 2025 CodeCraft. Tüm hakları saklıdır.</p>
   </footer>
 </body>
 </html>
+
+
