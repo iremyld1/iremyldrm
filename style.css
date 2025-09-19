@@ -156,6 +156,37 @@ body {
 .contact-links .linkedin { background: #0077b5; }
 .contact-links .github { background: #333; }
 .contact-links .twitter { background: #1da1f2; }
+/* Mobil uyumluluk */
+@media screen and (max-width: 768px) {
+  .container {
+    display: block; /* grid yerine block, tek kolon */
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  .main, .sidebar {
+    width: 100%;
+  }
+
+  .contact-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .hero-content h2 {
+    font-size: 28px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+}
 
 /* Footer */
 footer {
