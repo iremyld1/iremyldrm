@@ -16,7 +16,7 @@ body { background:#f0f4f9; color:#333; line-height:1.6; }
 
 /* Hero */
 .hero {
-  height:100vh;
+  height:110vh;
   background: linear-gradient(rgba(30,42,56,0.7), rgba(30,42,56,0.7)), url('https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200') center/cover no-repeat;
   display:flex; justify-content:center; align-items:center; text-align:center; color:#fff;
   animation: fadeIn 1.5s ease-in-out;
